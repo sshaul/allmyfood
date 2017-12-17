@@ -14,8 +14,7 @@ export default class TitleCard extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.props.name}</Text>
-        <Button title="Click me" onPress={this.helloWorld.bind(this)}></Button>
+        <Button title={this.props.name} onPress={this.helloWorld.bind(this)}></Button>
       </View>
     );
   }
@@ -29,4 +28,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+  button: {
+  }
+  });
