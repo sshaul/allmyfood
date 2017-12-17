@@ -9,8 +9,11 @@ export default class App extends Component {
         <View style={styles.titleContainer}>
           <Text style={styles.titleText}>allMyFood</Text>
         </View>
-        <View style={styles.container}>
+        <View style={styles.cardContainers}>
           <TitleCard name="Cooking" />
+          <TitleCard name="Baking" />
+          <TitleCard name="My Recipes" />
+          <TitleCard name="My Groceries" />
         </View>
       </View>
     );
@@ -24,6 +27,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 0
+  },
+  cardContainers: {
+  flex: 1,
+  backgroundColor: '#fff',
+  alignItems: 'flex-start',
+  justifyContent: 'flex-start',
+  paddingTop: 0
   },
   // ------------------- App Title properties ----------------- //
   titleContainer: {

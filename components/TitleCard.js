@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default class TitleCard extends Component {
   constructor(props) {
@@ -7,10 +7,15 @@ export default class TitleCard extends Component {
     this.state = {};
   }
 
+  helloWorld() {
+    console.log('hi!');
+  }
+
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <Text>{this.props.name}</Text>
+        <Button title="Click me" onPress={this.helloWorld.bind(this)}></Button>
       </View>
     );
   }
@@ -18,8 +23,9 @@ export default class TitleCard extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    flex: 0.25,
+    width: 150,
+    backgroundColor: '#9ddbd3',
     alignItems: 'center',
     justifyContent: 'center',
   },
