@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { Button } from 'react-native-elements';
 
 export default class Groceries extends Component {
 
   render() {
-      const nav = this.props.navigator;
+    const nav = this.props.navigator;
     return (
       <View style={styles.container}>
-        <Text> Hello! </Text>
+        <Button backgroundColor='#238' title="Add New Item"></Button>
+        <FlatList> Hello! </FlatList>
       </View>
     );
   }
@@ -20,5 +22,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 0
-  },
+  }
 });
