@@ -7,14 +7,17 @@ export default class TitleCard extends Component {
     this.state = {};
   }
 
-  helloWorld() {
-    console.log('hi!');
+  navigateCard() {
+    const navigate = this.props.nav.navigate;
+    if (this.props.name == 'My Groceries') {
+      navigate('Groceries', {});
+    }
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Button title={this.props.name} onPress={this.helloWorld.bind(this)}></Button>
+        <Text onPress={this.navigateCard.bind(this)}>{this.props.name} </Text>
       </View>
     );
   }
@@ -22,12 +25,12 @@ export default class TitleCard extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.25,
-    width: 150,
+    flex:0.4,
     backgroundColor: '#9ddbd3',
     alignItems: 'center',
     justifyContent: 'center',
+    height: 140,
+    marginLeft:5,
+    marginRight:5
   },
-  button: {
-  }
   });
