@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Button } from 'react-native';
 import containers from '../style/containers';
 
 export default class TitleCard extends Component {
@@ -17,9 +17,9 @@ export default class TitleCard extends Component {
 
   render() {
     return (
-      <View style={containers.titleCard}>
-        <Text onPress={this.navigateCard.bind(this)}>{this.props.name} </Text>
-      </View>
+      <TouchableOpacity style={containers.titleCard} onPress={this.navigateCard.bind(this)}>
+        <Text>{this.props.name} </Text>
+      </TouchableOpacity>
     );
   }
 }

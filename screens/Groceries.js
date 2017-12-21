@@ -20,12 +20,12 @@ export default class Groceries extends Component {
     />
   );
 
-  openModal = () => {
+  _openModal = () => {
     let currGroceries = this.state.groceries;
     this.setState({groceries: currGroceries, isModalVisible: true});
   };
 
-  closeModal = () => {
+  _closeModal = () => {
     let currGroceries = this.state.groceries;
     this.setState({groceries: currGroceries, isModalVisible: false});
   };
@@ -34,7 +34,7 @@ export default class Groceries extends Component {
     const nav = this.props.navigator;
     return (
       <View style={containers.groceryContainer}>
-        <TouchableOpacity style={containers.button} onPress={this.openModal.bind(this)}>
+        <TouchableOpacity style={containers.button} onPress={this._openModal}>
           <Text> Add New Item! </Text>
         </TouchableOpacity>
         <View style={containers.listview}>
@@ -43,10 +43,10 @@ export default class Groceries extends Component {
             renderItem={this._renderItem}
           />
         </View>
-        <Modal isVisible={this.state.isModalVisible}>
+        <Modal isVisible={this.state.isModalVisible} onBackdropPress={this._closeModal}>
           <View style={containers.modalContainer}>
             <Text> Oh hello! </Text>
-            <TouchableOpacity style={containers.button} onPress={this.closeModal.bind(this)}>
+            <TouchableOpacity style={containers.button} onPress={this._closeModal}>
               <Text> Close </Text>
             </TouchableOpacity>
           </View>

@@ -14,11 +14,12 @@ export default containers = StyleSheet.create({
       width: 150,
       backgroundColor: '#8377f3',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      borderRadius: 10
     },
     modalContainer: {
       flex: 1,
-      backgroundColor: "#fff",
+      backgroundColor: "#ff0",
       alignItems: 'center',
       justifyContent: 'center'
     },
@@ -49,7 +50,8 @@ export default containers = StyleSheet.create({
       justifyContent: 'center',
       height: 140,
       marginLeft:5,
-      marginRight:5
+      marginRight:5,
+      borderRadius: 10
     },
     //-------------------- Grocery Screen properties ----------------- //
     groceryContainer: {
