@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import containers from '../style/containers';
 
 export default class TitleCard extends Component {
   constructor(props) {
@@ -16,21 +17,9 @@ export default class TitleCard extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={containers.titleCard}>
         <Text onPress={this.navigateCard.bind(this)}>{this.props.name} </Text>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex:0.4,
-    backgroundColor: '#9ddbd3',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: 140,
-    marginLeft:5,
-    marginRight:5
-  },
-  });
