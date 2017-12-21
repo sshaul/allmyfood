@@ -9,6 +9,20 @@ export default containers = StyleSheet.create({
       justifyContent: 'flex-start',
       paddingTop: 0
     },
+    button: {
+      height: 50,
+      width: 150,
+      backgroundColor: '#8377f3',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    modalContainer: {
+      flex: 1,
+      backgroundColor: "#fff",
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    // ------------------- Title Screen Properties ----------------- //
     cardRow: {
       flexDirection: 'row',
       flex: 0.30,
@@ -18,7 +32,7 @@ export default containers = StyleSheet.create({
       justifyContent: 'center',
       paddingTop: 0
     },
-    // ------------------- App Title properties ----------------- //
+    
     title: {
       flex: 0.1,
       backgroundColor: '#fff',
@@ -27,7 +41,7 @@ export default containers = StyleSheet.create({
       paddingTop: 45,
       paddingBottom: 45
     },
-    //-------------------- TitleCard properties ----------------- //
+    
     titleCard: {
       flex:0.4,
       backgroundColor: '#9ddbd3',
@@ -37,7 +51,7 @@ export default containers = StyleSheet.create({
       marginLeft:5,
       marginRight:5
     },
-    //-------------------- Grocery properties ----------------- //
+    //-------------------- Grocery Screen properties ----------------- //
     groceryContainer: {
       flex: 1,
       backgroundColor: '#fff',
