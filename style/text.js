@@ -7,5 +7,9 @@ export default text = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'flex-start',
       fontSize: 45
+    },
+    groceryItem: {
+      flex: 1,
+      fontSize: 20,
     }
   });

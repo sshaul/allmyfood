@@ -63,19 +63,17 @@ export default containers = StyleSheet.create({
     },
     listview: {
       flex: 0.80,
-      width: 240,
+      width: '70%',
       backgroundColor: '#888',
-      alignItems: 'center',
+      alignItems: 'stretch',
       justifyContent: 'space-around',
     },
     groceryItem: {
-      flex:1,
+      flex: 1,
       backgroundColor: '#9ddbd3',
       alignItems: 'center',
       justifyContent: 'space-around',
-      marginTop:5,
-      height: 25,
-      width: 100
+      marginBottom:5,
     },
   });
   

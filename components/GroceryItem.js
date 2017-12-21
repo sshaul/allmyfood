@@ -13,11 +13,13 @@ export default class GroceryItem extends Component {
   };
 
   render() {
-    const textColor = "black";
     return (
       <View style={containers.groceryItem}>
-        <Text style={{ color: textColor }}>
+        <Text style={text.groceryItem}>
           {this.props.title}
+        </Text>
+        <Text style={[text.groceryItem, {fontSize: 12}]}>
+          expirationdate
         </Text>
       </View>
     );

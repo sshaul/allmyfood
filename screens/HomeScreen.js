@@ -10,7 +10,7 @@ export default class HomeScreen extends Component {
     return (
       <View style={containers.general}>
         <View style={containers.title}>
-          <Text style={text.title}>allMyFood</Text>
+          <Text style={text.title}>AllMyFood</Text>
         </View>
         <View style={containers.cardRow}>
           <TitleCard name="Cooking" nav={this.props.navigation} />
