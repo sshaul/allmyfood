@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, FlatList } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, FlatList, TextInput, DatePickerIOS } from 'react-native';
 import { Button } from 'react-native-elements';
 import GroceryItem from '../components/GroceryItem';
+import GroceryModal from '../components/GroceryModal';
 import containers from '../style/containers';
 import text from '../style/text';
 import Modal from 'react-native-modal';
@@ -22,13 +23,18 @@ export default class Groceries extends Component {
 
   _openModal = () => {
     let currGroceries = this.state.groceries;
-    this.setState({groceries: currGroceries, isModalVisible: true});
+    this.setState({isModalVisible: true});
   };
 
   _closeModal = () => {
     let currGroceries = this.state.groceries;
-    this.setState({groceries: currGroceries, isModalVisible: false});
+    this.setState({isModalVisible: false});
   };
+
+  _addGroceryItem = (item) => {
+    this.setState({groceries: this.state.groceries.concat(item)});
+    this._closeModal();
+  }
 
   render() {
     const nav = this.props.navigator;
@@ -43,14 +49,10 @@ export default class Groceries extends Component {
             renderItem={this._renderItem}
           />
         </View>
-        <Modal isVisible={this.state.isModalVisible} onBackdropPress={this._closeModal}>
-          <View style={containers.modalContainer}>
-            <Text> Oh hello! </Text>
-            <TouchableOpacity style={containers.button} onPress={this._closeModal}>
-              <Text> Close </Text>
-            </TouchableOpacity>
-          </View>
-        </Modal>
+        <GroceryModal visibility={this.state.isModalVisible} 
+          groceries={this.state.groceries}
+          _close={this._closeModal.bind(this)}
+          _addGroceries={this._addGroceryItem.bind(this)}/>
       </View>
     );
   }

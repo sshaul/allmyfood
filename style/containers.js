@@ -21,7 +21,7 @@ export default containers = StyleSheet.create({
       flex: 1,
       backgroundColor: "#ff0",
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'space-around'
     },
     // ------------------- Title Screen Properties ----------------- //
     cardRow: {
@@ -75,5 +75,9 @@ export default containers = StyleSheet.create({
       justifyContent: 'space-around',
       marginBottom:5,
     },
+    date: {
+      flex: 0.5,
+      alignSelf: 'stretch'
+    }
   });
   
