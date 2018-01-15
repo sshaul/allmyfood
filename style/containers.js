@@ -78,6 +78,13 @@ export default containers = StyleSheet.create({
     date: {
       flex: 0.5,
       alignSelf: 'stretch'
+    },
+    //-------------------- Grocery Screen properties ----------------- //
+    cooking: {
+      flex: 1,
+      backgroundColor: '#eee',
+      alignItems: 'center',
+      justifyContent: 'space-around',
     }
   });
   

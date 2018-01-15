@@ -3,6 +3,7 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import HomeScreen from '../screens/HomeScreen';
 import Groceries from '../screens/Groceries';
+import Cooking from '../screens/Cooking';
 
 export const Root = StackNavigator({
     Home : {
@@ -15,6 +16,12 @@ export const Root = StackNavigator({
         screen: Groceries,
         navigationOptions : {
             title: 'My Groceries'
+        }
+    },
+    Cooking : {
+        screen: Cooking,
+        navigationOptions : {
+            title: 'Cooking'
         }
     }
 });

@@ -13,6 +13,9 @@ export default class TitleCard extends Component {
     if (this.props.name == 'My Groceries') {
       navigate('Groceries', {});
     }
+    if (this.props.name == 'Cooking') {
+      navigate('Cooking', {});
+    }
   }
 
   render() {
