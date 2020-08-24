@@ -21,6 +21,7 @@ export default class GroceryModal extends Component {
   }
 
   render() {
+    console.log(this.state.date);
     return (
         <Modal isVisible={this.props.visibility} onBackdropPress={this.props._close}>
           <View style={containers.modalContainer}>
@@ -35,7 +36,7 @@ export default class GroceryModal extends Component {
               <DatePickerIOS
                 style={{ height: 30, width: '100%'}}
                 date={this.state.date} onDateChange={(date)=>this.setState({date: date})}
-                mode="date"/>
+                mode="datetime"/>
             </View>
             <TouchableOpacity style={containers.button} onPress={this._addItem}>
               <Text> submit </Text>

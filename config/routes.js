@@ -6,22 +6,22 @@ import Groceries from '../screens/Groceries';
 import Cooking from '../screens/Cooking';
 
 export const Root = StackNavigator({
-    Home : {
-        screen: HomeScreen,
-        navigationOptions : {
-            title: 'Welcome!'
-        }
-    },
+    // Home : {
+    //     screen: HomeScreen,
+    //     navigationOptions : {
+    //         header: null
+    //     }
+    // },
     Groceries : {
         screen: Groceries,
         navigationOptions : {
             title: 'My Groceries'
         }
     },
-    Cooking : {
-        screen: Cooking,
-        navigationOptions : {
-            title: 'Cooking'
-        }
-    }
+    // Cooking : {
+    //     screen: Cooking,
+    //     navigationOptions : {
+    //         title: 'Cooking'
+    //     }
+    // }
 });

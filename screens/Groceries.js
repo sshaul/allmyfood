@@ -49,7 +49,9 @@ export default class Groceries extends Component {
             renderItem={this._renderItem}
           />
         </View>
-        <GroceryModal visibility={this.state.isModalVisible} 
+        <GroceryModal 
+        // visibility={this.state.isModalVisible} 
+        visibility={true}
           groceries={this.state.groceries}
           _close={this._closeModal.bind(this)}
           _addGroceries={this._addGroceryItem.bind(this)}/>
